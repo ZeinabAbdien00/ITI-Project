@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@color/gray"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Country Name"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_today_cases"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_flag"
+            android:layout_width="140dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_today_death"
+            app:layout_constraintStart_toStartOf="@id/tv_country"
+            app:layout_constraintTop_toBottomOf="@id/tv_country" />
+
+        <ImageView
+            android:id="@+id/iv_cases"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/yellow"
+            app:layout_constraintBottom_toBottomOf="@id/tv_today_cases"
+            app:layout_constraintStart_toEndOf="@+id/iv_flag"
+            app:layout_constraintTop_toTopOf="@id/tv_today_cases" />
+        <TextView
+            android:id="@+id/tv_today_cases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Today Cases"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_today_recover"
+            app:layout_constraintStart_toEndOf="@id/iv_cases"
+            app:layout_constraintTop_toTopOf="@id/iv_flag" />
+
+        <ImageView
+            android:id="@+id/iv_recover"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@color/green"
+            app:layout_constraintBottom_toBottomOf="@id/tv_today_recover"
+            app:layout_constraintStart_toStartOf="@+id/iv_cases"
+            app:layout_constraintTop_toTopOf="@id/tv_today_recover" />
+        <TextView
+            android:id="@+id/tv_today_recover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today Recover"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_today_death"
+            app:layout_constraintStart_toStartOf="@+id/tv_today_cases"
+            app:layout_constraintTop_toBottomOf="@+id/tv_today_cases" />
+
+        <ImageView
+            android:id="@+id/iv_death"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@color/red"
+            app:layout_constraintBottom_toBottomOf="@id/tv_today_death"
+            app:layout_constraintStart_toStartOf="@+id/iv_cases"
+            app:layout_constraintTop_toTopOf="@id/tv_today_death" />
+        <TextView
+            android:id="@+id/tv_today_death"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Today Death"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_today_recover"
+            app:layout_constraintTop_toBottomOf="@+id/tv_today_recover" />
+
+        <org.eazegraph.lib.charts.PieChart
+            android:id="@+id/piechart"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="16dp"
+            app:egLegendHeight="0dp"
+            app:egLegendTextSize="0sp"
+            app:egUsePieRotation="true"
+            app:egValueTextSize="0sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_today_death"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
