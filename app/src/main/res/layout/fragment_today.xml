@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.today.TodayFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_all"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="-32dp"
+        android:backgroundTint="@color/base"
+        app:cardCornerRadius="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/all_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="35dp"
+            android:background="@color/base"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:text="Welcome to Coronavirus"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="All Statistics"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_all_cases"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/welcome" />
+
+            <ImageView
+                android:id="@+id/iv_all_cases"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="4dp"
+                android:background="@color/dark_yellow"
+                app:layout_constraintBottom_toBottomOf="@id/tv_all_cases"
+                app:layout_constraintStart_toStartOf="@id/tv_all"
+                app:layout_constraintTop_toTopOf="@id/tv_all_cases" />
+
+            <TextView
+                android:id="@+id/tv_all_cases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="All Cases"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintBottom_toTopOf="@id/tv_all_deaths"
+                app:layout_constraintStart_toEndOf="@id/iv_all_cases"
+                app:layout_constraintTop_toBottomOf="@id/tv_all" />
+
+            <ImageView
+                android:id="@+id/iv_all_deaths"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@color/dark_red"
+                app:layout_constraintBottom_toBottomOf="@id/tv_all_deaths"
+                app:layout_constraintStart_toStartOf="@+id/iv_all_cases"
+                app:layout_constraintTop_toTopOf="@id/tv_all_deaths" />
+
+            <TextView
+                android:id="@+id/tv_all_deaths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Deathes"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_recovered"
+                app:layout_constraintStart_toStartOf="@+id/tv_all_cases"
+                app:layout_constraintTop_toBottomOf="@+id/tv_all_cases" />
+
+            <ImageView
+                android:id="@+id/iv_recover_"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@color/green"
+                app:layout_constraintBottom_toBottomOf="@id/tv_recovered"
+                app:layout_constraintStart_toStartOf="@+id/iv_all_deaths"
+                app:layout_constraintTop_toTopOf="@id/tv_recovered" />
+
+            <TextView
+                android:id="@+id/tv_recovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Recovered"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_critical"
+                app:layout_constraintStart_toStartOf="@+id/tv_all_deaths"
+                app:layout_constraintTop_toBottomOf="@+id/tv_all_deaths" />
+
+            <ImageView
+                android:id="@+id/iv_critical"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@color/orange"
+                app:layout_constraintBottom_toBottomOf="@id/tv_critical"
+                app:layout_constraintStart_toStartOf="@+id/iv_all_deaths"
+                app:layout_constraintTop_toTopOf="@id/tv_critical" />
+
+            <TextView
+                android:id="@+id/tv_critical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Critical"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_all_deaths"
+                app:layout_constraintTop_toBottomOf="@+id/tv_recovered" />
+
+            <ImageView
+                android:id="@+id/iv_cases"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/yellow"
+                app:layout_constraintBottom_toBottomOf="@id/tv_today_cases"
+                app:layout_constraintStart_toEndOf="@+id/tv_all"
+                app:layout_constraintTop_toTopOf="@id/tv_today_cases" />
+
+            <TextView
+                android:id="@+id/tv_today_cases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="Today Cases"
+                android:layout_marginTop="4dp"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_today_death"
+                app:layout_constraintStart_toEndOf="@id/iv_cases"
+                app:layout_constraintTop_toBottomOf="@id/tv_all" />
+
+            <ImageView
+                android:id="@+id/iv_death"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@color/red"
+                app:layout_constraintBottom_toBottomOf="@id/tv_today_death"
+                app:layout_constraintStart_toStartOf="@+id/iv_cases"
+                app:layout_constraintTop_toTopOf="@id/tv_today_death" />
+
+            <TextView
+                android:id="@+id/tv_today_death"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today Deaths"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_active"
+                app:layout_constraintStart_toStartOf="@+id/tv_today_cases"
+                app:layout_constraintTop_toBottomOf="@+id/tv_today_cases" />
+
+            <ImageView
+                android:id="@+id/iv_active"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@color/pink"
+                app:layout_constraintBottom_toBottomOf="@id/tv_active"
+                app:layout_constraintStart_toStartOf="@+id/iv_cases"
+                app:layout_constraintTop_toTopOf="@id/tv_active" />
+
+            <TextView
+                android:id="@+id/tv_active"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_tests"
+                app:layout_constraintStart_toStartOf="@+id/tv_today_death"
+                app:layout_constraintTop_toBottomOf="@+id/tv_today_death" />
+
+            <ImageView
+                android:id="@+id/iv_tests"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@color/blue"
+                app:layout_constraintBottom_toBottomOf="@id/tv_tests"
+                app:layout_constraintStart_toStartOf="@+id/iv_cases"
+                app:layout_constraintTop_toTopOf="@id/tv_tests" />
+
+            <TextView
+                android:id="@+id/tv_tests"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tests"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_today_death"
+                app:layout_constraintTop_toBottomOf="@+id/tv_active" />
+
+            <org.eazegraph.lib.charts.PieChart
+                android:id="@+id/all_pie_chart"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="16dp"
+                app:egLegendHeight="0dp"
+                app:layout_constraintTop_toTopOf="@id/tv_today_cases"
+                app:egLegendTextSize="0sp"
+                app:egUsePieRotation="true"
+                app:egValueTextSize="0sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_tests"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Today Statistics"
+        android:textColor="@color/base"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_all" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_saved_quotes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        tools:listitem="@layout/countries_item" />
+
+    <ProgressBar
+        android:id="@+id/today_progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/base"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
