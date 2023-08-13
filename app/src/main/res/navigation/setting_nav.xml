@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/setting_nav"
+    app:startDestination="@id/settingDetailsFragment">
+
+    <fragment
+        android:id="@+id/settingDetailsFragment"
+        android:name="com.iti.itiproject.ui.home.setting.setting.SettingDetailsFragment"
+        android:label="fragment_setting_details"
+        tools:layout="@layout/fragment_setting_details" >
+        <action
+            android:id="@+id/action_settingDetailsFragment_to_adviceFragment2"
+            app:destination="@id/adviceFragment2" />
+        <action
+            android:id="@+id/action_settingDetailsFragment_to_profileFragment2"
+            app:destination="@id/profileFragment2" />
+        <action
+            android:id="@+id/action_settingDetailsFragment_to_themeDialog"
+            app:destination="@id/themeDialog" />
+    </fragment>
+    <dialog
+        android:id="@+id/adviceFragment2"
+        android:name="com.iti.itiproject.ui.home.setting.advice.AdviceFragment"
+        android:label="fragment_advice"
+        tools:layout="@layout/fragment_advice" />
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.iti.itiproject.ui.home.setting.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <dialog
+        android:id="@+id/themeDialog"
+        android:name="com.iti.itiproject.ui.home.setting.theme.ThemeDialog"
+        android:label="fragment_theme_dialog"
+        tools:layout="@layout/fragment_theme_dialog" />
+</navigation>
