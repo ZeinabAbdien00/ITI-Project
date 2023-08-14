@@ -16,7 +16,7 @@ import kotlinx.coroutines.launch
 
 class ThemeDialog : DialogFragment() {
     private lateinit var binding: FragmentThemeDialogBinding
-    private lateinit var dataStore : DataStoreImplementation
+    private lateinit var dataStore: DataStoreImplementation
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,7 +37,7 @@ class ThemeDialog : DialogFragment() {
         val height = metrics.heightPixels
 
         this.dialog!!.window!!.setLayout(((9 * width) / 10), (2 * height) / 10)
-        setonClickListener ()
+        setonClickListener()
 
     }
 
@@ -49,7 +49,6 @@ class ThemeDialog : DialogFragment() {
             changeDarkMode(checkedButton = false)
         }
     }
-
 
     private fun changeDarkMode(checkedButton: Boolean) {
         themeSwitch(checkedButton)

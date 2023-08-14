@@ -26,7 +26,6 @@ class TodayViewModel(
     private val _isLoading = MutableLiveData<Boolean>(true)
     val isLoading: LiveData<Boolean> = _isLoading
 
-
     fun getCountries() = viewModelScope.launch {
         safeCountriesCall()
     }

@@ -7,8 +7,6 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.iti.itiproject.ui.home.all_countries.AllCountriesFragment
 import com.iti.itiproject.ui.home.search.SearchFragment
 import com.iti.itiproject.ui.home.setting.SettingFragment
-import com.iti.itiproject.ui.home.setting.advice.AdviceFragment
-import com.iti.itiproject.ui.home.setting.profile.ProfileFragment
 import com.iti.itiproject.ui.home.today.TodayFragment
 
 class ViewPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
@@ -23,8 +21,6 @@ class ViewPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
             0 -> TodayFragment()
             1 -> AllCountriesFragment()
             2 -> SearchFragment()
-//            4 -> ProfileFragment()
-//            5 -> AdviceFragment()
             else -> SettingFragment()
         }
     }

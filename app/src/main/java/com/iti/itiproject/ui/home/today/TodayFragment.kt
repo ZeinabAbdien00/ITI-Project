@@ -2,22 +2,17 @@ package com.iti.itiproject.ui.home.today
 
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Half.toFloat
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.iti.itiproject.R
 import com.iti.itiproject.adapter.home.CountriesRVAdapter
 import com.iti.itiproject.databinding.FragmentTodayBinding
 import com.iti.itiproject.model.api.today.TodayResponse
-import com.iti.itiproject.model.api.today.TodayResponseItem
 import com.iti.itiproject.model.api.today.all.TodayAll
 import com.iti.itiproject.ui.home.BaseRepository
 import org.eazegraph.lib.models.PieModel
@@ -75,14 +70,14 @@ class TodayFragment : Fragment() {
             allPieChart.addPieSlice(
                 PieModel(
                     "TodayCases",
-                    (it!!.todayCases * 120).toFloat(),
+                    (it!!.todayCases * 150).toFloat(),
                     Color.parseColor("#CBD122")
                 )
             )
             allPieChart.addPieSlice(
                 PieModel(
                     "TodayDeath",
-                    (it.todayDeaths * 10020).toFloat(),
+                    (it.todayDeaths * 10090).toFloat(),
                     Color.parseColor("#DD2020")
                 )
             )

@@ -1,13 +1,10 @@
 package com.iti.itiproject.ui.home.setting.setting
 
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.Matrix
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
@@ -21,7 +18,6 @@ import com.iti.itiproject.ui.home.setting.SettingViewModel
 import com.iti.itiproject.ui.setup.MainActivity
 import com.iti.itiproject.utils.convertStringToBitmap
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
 
@@ -77,12 +73,7 @@ class SettingDetailsFragment : Fragment() {
                 findNavController().navigate(SettingDetailsFragmentDirections.actionSettingDetailsFragmentToThemeDialog())
             }
             logoutLinear.setOnClickListener {
-                showDialog(
-                    "Are you sure you want to log out?",
-                    "Logout",
-                    "Cancel",
-                    logOutLogic
-                )
+                showDialog(logOutLogic)
             }
         }
     }
@@ -91,18 +82,15 @@ class SettingDetailsFragment : Fragment() {
 
 
     private fun showDialog(
-        message: String,
-        positiveTxt: String,
-        negativeTxt: String,
         logic: () -> Unit,
     ) {
         MaterialAlertDialogBuilder(requireContext(), R.style.AlertDialogCustom)
-            .setMessage(message)
+            .setMessage("Are you sure you want to log out?")
             .setCancelable(false)
-            .setPositiveButton(positiveTxt) { _, _ ->
+            .setPositiveButton("Logout") { _, _ ->
                 logic()
             }
-            .setNegativeButton(negativeTxt) { dialog, _ ->
+            .setNegativeButton("Cancel") { dialog, _ ->
                 dialog.dismiss()
             }
             .setCancelable(true)

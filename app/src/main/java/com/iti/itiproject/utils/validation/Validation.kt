@@ -25,10 +25,6 @@ fun validatePassword(password: String): ValidationResult<PasswordError> {
     if (password.length > 20) {
         return ValidationResult.Error(PasswordError.IS_LONG)
     }
-    val passwordIsValid = password.any { it.isUpperCase() }
-//    if (!passwordIsValid) {
-//        return ValidationResult.Error(PasswordError.HAS_NO_UPPER_LETTER)
-//    }
     return ValidationResult.Success(true)
 }
 
