@@ -5,7 +5,6 @@ import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
-import com.google.firebase.auth.FirebaseUser
 import com.iti.itiproject.model.auth.AuthModel
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
@@ -58,7 +57,7 @@ class DataStoreImplementation(
         }.first().toString()
 
         return AuthModel(
-            userId =userId,
+            userId = userId,
             fullName = name,
             email = email,
             phone = phone,
@@ -163,30 +162,4 @@ class DataStoreImplementation(
             settings[stringPreferencesKey(USER_ID)]
         }.first().toString()
     }
-
-//    override suspend fun getCurrentUser() = FirebaseUser.withContext(dispatcher) {
-//        dataStoreO!!.data.map { settings ->
-//            settings[stringPreferencesKey(FIREBASE_USER)]
-//        }.first() as FirebaseUser
-//    }
-//
-//    override suspend fun setCurrentUser(user: FirebaseUser) {
-//        withContext(dispatcher) {
-//            dataStoreO?.edit { settings ->
-//                settings[stringPreferencesKey(FIREBASE_USER)] = user.toString()
-//            }
-//        }
-//    }
-
-//    override suspend fun setLanguage(language: String) {
-//        mDataStore.edit { settings ->
-//            settings[stringPreferencesKey(LANGUAGE)] = language
-//        }
-//    }
-//
-//    override suspend fun getLanguage(): String = withContext(dispatcher) {
-//        mDataStore.data.map { settings ->
-//            settings[stringPreferencesKey(LANGUAGE)] ?: "English"
-//        }.first()
-//    }
 }

@@ -1,23 +1,17 @@
 package com.iti.itiproject.ui.home
 
 import android.content.Context
-import android.content.Intent
 import android.content.res.ColorStateList
-import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.util.TypedValue
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
-import androidx.datastore.dataStore
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import androidx.viewpager2.widget.ViewPager2
@@ -107,7 +101,6 @@ class HomeActivity : AppCompatActivity() {
         CoroutineScope(Dispatchers.IO).launch {
             viewModel.saveUserDataAndLogFlag(
                 data,
-                context = this@HomeActivity,
                 dataStore = dataStore
             )
         }

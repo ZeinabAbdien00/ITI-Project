@@ -60,7 +60,6 @@ class LoginViewModel : ViewModel() {
     }
 
     suspend fun saveUserDataAndLogFlag(user: AuthModel, context: Context?) {
-        // save user data to data store
         dataStore = DataStoreImplementation(appContext = context, Dispatchers.IO)
         dataStore.setLogged(true)
         dataStore.setUSerLogged(true)

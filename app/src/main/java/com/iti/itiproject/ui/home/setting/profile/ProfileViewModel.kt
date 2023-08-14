@@ -21,7 +21,6 @@ class ProfileViewModel(val dataStore: DataStoreImplementation) : ViewModel() {
     }
 
     suspend fun saveUserDataAndLogFlag(user: AuthModel) {
-        // save user data to data store
         dataStore.setLogged(true)
         dataStore.setUSerLogged(true)
         dataStore.saveUser(user)
