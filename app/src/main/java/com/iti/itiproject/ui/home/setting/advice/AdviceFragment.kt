@@ -3,7 +3,6 @@ package com.iti.itiproject.ui.home.setting.advice
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,9 +14,6 @@ import com.iti.itiproject.R
 import com.iti.itiproject.databinding.FragmentAdviceBinding
 import com.ramotion.paperonboarding.PaperOnboardingFragment
 import com.ramotion.paperonboarding.PaperOnboardingPage
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 
 class AdviceFragment : DialogFragment() {
 
@@ -53,7 +49,7 @@ class AdviceFragment : DialogFragment() {
     }
 
     private fun setOnClickListener() {
-        binding.btnAdviceBack.setOnClickListener{
+        binding.btnAdviceBack.setOnClickListener {
             findNavController().navigateUp()
         }
     }

@@ -1,12 +1,11 @@
 package com.iti.itiproject.ui.home.all_countries
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -24,7 +23,6 @@ class AllCountriesFragment : Fragment() {
 
     private lateinit var viewModel: TodayViewModel
     private lateinit var repository: BaseRepository
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

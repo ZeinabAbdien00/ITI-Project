@@ -28,7 +28,7 @@ open class BaseRepository {
     private fun getSearchQuotes(country: String) =
         retrofitObject.getCountryData(country)
 
-    suspend fun logOut(dataStore : DataStoreImplementation) {
+    suspend fun logOut(dataStore: DataStoreImplementation) {
         dataStore.setUSerLogged(false)
         dataStore.clearAllData()
     }

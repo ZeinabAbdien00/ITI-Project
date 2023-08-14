@@ -10,12 +10,6 @@ import retrofit2.http.Query
 
 interface CoronaApi {
 
-//    @GET("continents")
-//    fun getContinentsData(
-//        @Query("yesterday") yesterday: Boolean = false,
-//        @Query("sort") sort: String = "false"
-//    ): Call<ApiResponse>
-
     @GET("countries")
     fun getCountriesData(
         @Query("yesterday") yesterday: Boolean = true,

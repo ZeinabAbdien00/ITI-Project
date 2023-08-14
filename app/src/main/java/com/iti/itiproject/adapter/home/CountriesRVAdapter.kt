@@ -1,7 +1,6 @@
 package com.iti.itiproject.adapter.home
 
 import android.graphics.Color
-import android.util.Half.toFloat
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -46,7 +45,7 @@ class CountriesRVAdapter(private var countriesArrayList: TodayResponse?) :
             .fitCenter()
             .into(holder.flag)
 
-        addPieSlices(holder = holder , item)
+        addPieSlices(holder = holder, item)
 
     }
 

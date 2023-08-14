@@ -1,6 +1,5 @@
 package com.iti.itiproject.data.datastore
 
-import com.google.firebase.auth.FirebaseUser
 import com.iti.itiproject.model.auth.AuthModel
 
 interface DataStore {
@@ -32,15 +31,6 @@ interface DataStore {
     suspend fun getUserImageUri(): String
 
     suspend fun getUserId(): String
-
-//    suspend fun getCurrentUser(): FirebaseUser
-//
-//    suspend fun setCurrentUser(user: FirebaseUser)
-
-
-//    suspend fun setLanguage(language: String)
-//
-//    suspend fun getLanguage(): String
 
 
 }
