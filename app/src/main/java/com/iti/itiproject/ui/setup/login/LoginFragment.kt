@@ -75,6 +75,13 @@ class LoginFragment : Fragment() {
             tvSignUp.setOnClickListener {
                 findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToSignUpFragment())
             }
+            tvForgotPassword.setOnClickListener {
+                if (etEmail.text.toString().isNotEmpty()) {
+                    auth.sendPasswordResetEmail(etEmail.text.toString())
+                    Toast.makeText(requireContext() , "Check your email", Toast.LENGTH_SHORT).show()
+                }else
+                    Toast.makeText(requireContext() , "Enter your email", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
