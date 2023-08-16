@@ -24,13 +24,13 @@
             android:id="@+id/tv_welcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="-12dp"
             android:text="@string/welcome"
             android:textColor="@color/base"
-            android:layout_marginBottom="-12dp"
             android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_corona"
             app:layout_constraintEnd_toEndOf="@id/iv_corona"
-            app:layout_constraintStart_toStartOf="@id/iv_corona"
-            app:layout_constraintBottom_toBottomOf="@id/iv_corona" />
+            app:layout_constraintStart_toStartOf="@id/iv_corona" />
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -78,14 +78,14 @@
             android:textColorHint="@color/base"
             android:textSize="18sp"
             app:boxStrokeColor="@color/base"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/base"
             app:hintTextColor="@color/base"
             app:layout_constraintEnd_toEndOf="@id/l_email"
             app:layout_constraintStart_toStartOf="@id/l_email"
             app:layout_constraintTop_toBottomOf="@id/l_email"
             app:startIconDrawable="@drawable/ic_lock"
-            app:startIconTint="@color/base"
-            app:endIconMode="password_toggle"
-            app:endIconTint="@color/base">
+            app:startIconTint="@color/base">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_password"
@@ -124,9 +124,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="35dp"
+            android:background="@drawable/main_button"
             android:backgroundTint="@color/base"
             android:text="@string/login"
-            android:background="@drawable/main_button"
             android:textAllCaps="false"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@id/l_email"

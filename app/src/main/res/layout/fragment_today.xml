@@ -30,12 +30,12 @@
                 android:id="@+id/welcome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginTop="8dp"
-                android:textStyle="bold"
+                android:gravity="center"
                 android:text="Welcome to Coronavirus"
                 android:textColor="@color/white"
                 android:textSize="26sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -68,9 +68,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
                 android:text="All Cases"
                 android:textSize="14sp"
-                android:layout_marginTop="4dp"
                 app:layout_constraintBottom_toTopOf="@id/tv_all_deaths"
                 app:layout_constraintStart_toEndOf="@id/iv_all_cases"
                 app:layout_constraintTop_toBottomOf="@id/tv_all" />
@@ -148,8 +148,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:text="Today Cases"
                 android:layout_marginTop="4dp"
+                android:text="Today Cases"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@id/tv_today_death"
                 app:layout_constraintStart_toEndOf="@id/iv_cases"
@@ -218,12 +218,12 @@
                 android:layout_height="100dp"
                 android:layout_marginEnd="16dp"
                 app:egLegendHeight="0dp"
-                app:layout_constraintTop_toTopOf="@id/tv_today_cases"
                 app:egLegendTextSize="0sp"
                 app:egUsePieRotation="true"
                 app:egValueTextSize="0sp"
                 app:layout_constraintBottom_toBottomOf="@id/tv_tests"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_today_cases" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

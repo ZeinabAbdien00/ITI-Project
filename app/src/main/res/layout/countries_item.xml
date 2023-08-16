@@ -41,6 +41,7 @@
             app:layout_constraintBottom_toBottomOf="@id/tv_today_cases"
             app:layout_constraintStart_toEndOf="@+id/iv_flag"
             app:layout_constraintTop_toTopOf="@id/tv_today_cases" />
+
         <TextView
             android:id="@+id/tv_today_cases"
             android:layout_width="wrap_content"
@@ -60,6 +61,7 @@
             app:layout_constraintBottom_toBottomOf="@id/tv_today_recover"
             app:layout_constraintStart_toStartOf="@+id/iv_cases"
             app:layout_constraintTop_toTopOf="@id/tv_today_recover" />
+
         <TextView
             android:id="@+id/tv_today_recover"
             android:layout_width="wrap_content"
@@ -78,6 +80,7 @@
             app:layout_constraintBottom_toBottomOf="@id/tv_today_death"
             app:layout_constraintStart_toStartOf="@+id/iv_cases"
             app:layout_constraintTop_toTopOf="@id/tv_today_death" />
+
         <TextView
             android:id="@+id/tv_today_death"
             android:layout_width="wrap_content"

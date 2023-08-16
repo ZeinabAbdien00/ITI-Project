@@ -183,11 +183,11 @@
             android:textColorHint="@color/base"
             android:textSize="18sp"
             app:boxStrokeColor="@color/base"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/base"
             app:hintTextColor="@color/base"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/l_phone"
-            app:endIconMode="password_toggle"
-            app:endIconTint="@color/base"
             app:startIconDrawable="@drawable/ic_lock"
             app:startIconTint="@color/base">
 
