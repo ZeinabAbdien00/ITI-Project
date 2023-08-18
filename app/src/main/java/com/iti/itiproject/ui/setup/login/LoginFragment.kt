@@ -78,9 +78,9 @@ class LoginFragment : Fragment() {
             tvForgotPassword.setOnClickListener {
                 if (etEmail.text.toString().isNotEmpty()) {
                     auth.sendPasswordResetEmail(etEmail.text.toString())
-                    Toast.makeText(requireContext() , "Check your email", Toast.LENGTH_SHORT).show()
-                }else
-                    Toast.makeText(requireContext() , "Enter your email", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Check your email", Toast.LENGTH_SHORT).show()
+                } else
+                    Toast.makeText(requireContext(), "Enter your email", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -102,6 +102,27 @@ class LoginFragment : Fragment() {
                         val userId = auth.currentUser?.uid ?: ""
                         val database = FirebaseDatabase.getInstance()
                         val userReference = database.getReference("users").child(userId)
+
+                        val updates = hashMapOf<String, Any>(
+                            "password" to password,
+                        )
+
+                        userReference.updateChildren(updates)
+                            .addOnSuccessListener {
+                                Toast.makeText(
+                                    requireContext(),
+                                    "Password Updated",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
+                            .addOnFailureListener {
+                                Toast.makeText(
+                                    requireContext(),
+                                    "Error with Saved",
+                                    Toast.LENGTH_SHORT
+                                )
+                                    .show()
+                            }
 
                         userReference.addListenerForSingleValueEvent(object : ValueEventListener {
                             override fun onDataChange(snapshot: DataSnapshot) {
