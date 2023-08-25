@@ -76,6 +76,8 @@ class LoginFragment : Fragment() {
                 findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToSignUpFragment())
             }
             tvForgotPassword.setOnClickListener {
+//                auth.getAccessToken(true)
+
                 if (etEmail.text.toString().isNotEmpty()) {
                     auth.sendPasswordResetEmail(etEmail.text.toString())
                     Toast.makeText(requireContext(), "Check your email", Toast.LENGTH_SHORT).show()
@@ -129,7 +131,6 @@ class LoginFragment : Fragment() {
                                 val userData = snapshot.getValue(AuthModel::class.java)
                                 if (userData != null) {
                                     saveDataStore(userData)
-                                    Log.d("dataFetch", userData.toString())
                                     startActivity(
                                         Intent(
                                             requireActivity(),
@@ -141,7 +142,6 @@ class LoginFragment : Fragment() {
                             }
 
                             override fun onCancelled(error: DatabaseError) {
-                                Log.d("dataFetch", error.toString())
                                 Toast.makeText(
                                     requireContext(),
                                     error.toString(),
