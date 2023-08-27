@@ -18,7 +18,6 @@ class SearchFragment : Fragment() {
     private lateinit var binding: FragmentSearchBinding
     private lateinit var viewModel: SearchViewModel
     private lateinit var repository: BaseRepository
-    private lateinit var searchAdapter: AllDataRVAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

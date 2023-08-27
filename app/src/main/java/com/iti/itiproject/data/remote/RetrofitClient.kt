@@ -16,7 +16,7 @@ object RetrofitClient {
             .addConverterFactory(GsonConverterFactory.create())
             .client(
                 OkHttpClient.Builder()
-                    .addInterceptor(httpLogging)// Add your custom interceptor here
+                    .addInterceptor(httpLogging)
                     .build()
             )
             .build()

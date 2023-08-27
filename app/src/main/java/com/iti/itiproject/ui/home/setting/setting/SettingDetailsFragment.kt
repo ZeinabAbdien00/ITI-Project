@@ -26,19 +26,16 @@ class SettingDetailsFragment : Fragment() {
     private lateinit var viewModel: SettingViewModel
     private lateinit var repository: BaseRepository
     private lateinit var dataStore: DataStoreImplementation
-    private lateinit var navController: NavController
-
     private lateinit var binding: FragmentSettingDetailsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentSettingDetailsBinding.inflate(layoutInflater)
         repository = BaseRepository()
         dataStore = DataStoreImplementation(context)
         viewModel = SettingViewModel(repository, dataStore)
-        // Inflate the layout for this fragment
         return binding.root
     }
 

@@ -22,7 +22,6 @@ class TodayFragment : Fragment() {
 
     private lateinit var binding: FragmentTodayBinding
     private lateinit var countriesAdapter: CountriesRVAdapter
-
     private lateinit var viewModel: TodayViewModel
     private lateinit var repository: BaseRepository
 

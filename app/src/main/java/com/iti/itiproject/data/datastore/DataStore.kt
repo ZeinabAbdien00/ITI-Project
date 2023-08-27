@@ -32,5 +32,4 @@ interface DataStore {
 
     suspend fun getUserId(): String
 
-
 }

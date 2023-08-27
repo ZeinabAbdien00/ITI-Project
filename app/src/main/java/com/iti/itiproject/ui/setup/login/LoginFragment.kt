@@ -31,7 +31,6 @@ class LoginFragment : Fragment() {
 
     @Inject
     lateinit var dataStore: DataStoreImplementation
-
     private lateinit var binding: FragmentLoginBinding
     private lateinit var auth: FirebaseAuth
     private lateinit var email: String
@@ -76,7 +75,6 @@ class LoginFragment : Fragment() {
                 findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToSignUpFragment())
             }
             tvForgotPassword.setOnClickListener {
-//                auth.getAccessToken(true)
 
                 if (etEmail.text.toString().isNotEmpty()) {
                     auth.sendPasswordResetEmail(etEmail.text.toString())

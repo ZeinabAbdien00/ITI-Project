@@ -12,10 +12,8 @@ import com.iti.itiproject.model.api.today.TodayResponse
 import com.iti.itiproject.model.api.today.TodayResponseItem
 import org.eazegraph.lib.models.PieModel
 
-
 class CountriesRVAdapter(private var countriesArrayList: TodayResponse?) :
     RecyclerView.Adapter<CountriesRVAdapter.CountriesAdapter>() {
-
 
     inner class CountriesAdapter(private val binding: CountriesItemBinding) :
         RecyclerView.ViewHolder(binding.root) {

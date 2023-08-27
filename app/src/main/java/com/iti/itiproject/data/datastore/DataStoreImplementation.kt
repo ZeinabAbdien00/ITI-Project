@@ -31,10 +31,8 @@ class DataStoreImplementation(
         const val USER_IMAGE_URL = "userImage"
         const val IS_LOGGED_IN = "loggedIn"
         const val IS_PASSED_ON_BOARDING = "passedIntro"
-        const val LANGUAGE = "language"
         const val DARK_MODE = "isDark"
         const val USER_PASSWORD = "savePassword"
-        const val FIREBASE_USER = "savePassword"
 
     }
 

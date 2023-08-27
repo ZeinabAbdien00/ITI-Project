@@ -20,7 +20,6 @@ class AllCountriesFragment : Fragment() {
 
     private lateinit var binding: FragmentAllCountriesBinding
     private lateinit var allCountriesAdapter: AllDataRVAdapter
-
     private lateinit var viewModel: TodayViewModel
     private lateinit var repository: BaseRepository
 

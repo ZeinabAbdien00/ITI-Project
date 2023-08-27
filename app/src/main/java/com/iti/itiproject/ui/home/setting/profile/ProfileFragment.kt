@@ -39,14 +39,11 @@ class ProfileFragment : Fragment() {
 
     private lateinit var dataStore: DataStoreImplementation
     private lateinit var viewModel: ProfileViewModel
-
+    private lateinit var user: FirebaseUser
+    private lateinit var binding: FragmentProfileBinding
     private var uri: Uri? = null
-
     private var sImg: String? = null
 
-    private lateinit var user: FirebaseUser
-
-    private lateinit var binding: FragmentProfileBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -103,7 +100,6 @@ class ProfileFragment : Fragment() {
                         imgUri = sImg
                     )
                 )
-
 
                 val updates = hashMapOf<String, Any>(
                     "userId" to dataStore.getUserId(),

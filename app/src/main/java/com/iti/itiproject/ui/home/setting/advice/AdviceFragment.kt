@@ -57,7 +57,6 @@ class AdviceFragment : DialogFragment() {
     private fun setUpOnBoarding() {
 
         fragmentManager = childFragmentManager
-
         paperOnBoardingFragment = PaperOnboardingFragment.newInstance(getDataForOnBoarding())
         fragmentTransaction = fragmentManager!!.beginTransaction()
 
@@ -65,7 +64,6 @@ class AdviceFragment : DialogFragment() {
             R.id.frame_layout_main,
             paperOnBoardingFragment
         )
-
         fragmentTransaction.commit()
     }
 
