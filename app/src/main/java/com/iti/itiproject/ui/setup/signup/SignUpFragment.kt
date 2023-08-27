@@ -44,7 +44,7 @@ class SignUpFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
         binding = FragmentSignUpBinding.inflate(layoutInflater)
         dataStore = DataStoreImplementation(appContext = context)
 
