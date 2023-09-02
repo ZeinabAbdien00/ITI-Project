@@ -20,4 +20,8 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="phone_number">Phone number</string>
     <string name="save">Save</string>
+    <string name="today_recover">Today Recover</string>
+    <string name="today_cases">Today Cases</string>
+    <string name="country_name">Country Name</string>
+    <string name="today_death">Today Death</string>
 </resources>

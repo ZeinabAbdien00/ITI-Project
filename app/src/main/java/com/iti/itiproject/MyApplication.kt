@@ -27,5 +27,4 @@ class MyApplication : Application() {
         context = applicationContext
         instance = this
     }
-
 }
