@@ -44,5 +44,4 @@ class AllDataRVAdapter(private var countriesArrayList: TodayResponse?) :
         holder.population.text = item.population.toString()
         holder.recovered.text = item.recovered.toString()
     }
-
 }

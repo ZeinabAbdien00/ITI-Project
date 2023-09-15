@@ -78,5 +78,4 @@ class CountriesRVAdapter(private var countriesArrayList: TodayResponse?) :
         holder.pieChart.startAnimation()
 
     }
-
 }

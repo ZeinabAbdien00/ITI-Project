@@ -140,5 +140,4 @@ class TodayFragment : Fragment() {
             adapter = countriesAdapter
         }
     }
-
 }

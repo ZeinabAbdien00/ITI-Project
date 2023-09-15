@@ -63,5 +63,4 @@ class AllCountriesFragment : Fragment() {
             adapter = allCountriesAdapter
         }
     }
-
 }
