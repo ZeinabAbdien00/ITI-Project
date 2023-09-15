@@ -22,5 +22,4 @@ object RetrofitClient {
             .build()
 
     fun apiServiceInstance(): CoronaApi = instance().create(CoronaApi::class.java)
-
 }

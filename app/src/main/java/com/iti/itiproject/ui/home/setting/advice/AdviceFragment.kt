@@ -139,5 +139,4 @@ class AdviceFragment : DialogFragment() {
         elements.add(source8)
         return elements
     }
-
 }
