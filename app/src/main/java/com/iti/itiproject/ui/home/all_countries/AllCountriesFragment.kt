@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.gms.common.api.GoogleApiClient
 import com.iti.itiproject.adapter.all.AllDataRVAdapter
 import com.iti.itiproject.databinding.FragmentAllCountriesBinding
 import com.iti.itiproject.model.api.today.TodayResponse
@@ -27,6 +28,7 @@ class AllCountriesFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        GoogleApiClient.getAllClients();
         binding = FragmentAllCountriesBinding.inflate(layoutInflater)
         repository = BaseRepository()
         viewModel = TodayViewModel(repository)
